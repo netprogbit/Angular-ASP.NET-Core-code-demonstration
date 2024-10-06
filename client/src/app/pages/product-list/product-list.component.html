@@ -1,0 +1,14 @@
+<div class="products">
+  <h1 class="products__header">Product List</h1>
+  <div class="products__list">
+    <div class="products__item" *ngFor="let product of productsSignal()">
+      <div class="products__cell">{{ product.id }}</div>
+      <div class="products__cell">{{ product.name }}</div>
+      <div class="products__cell">{{ product.description }}</div>
+      <div class="products__cell">{{ product.price }}</div>
+      <div class="products__cell">
+        <button class="products__edit" (click)="editProduct(product.id)">Edit</button>
+      </div>      
+    </div>
+  </div>    
+</div>

@@ -1,0 +1,22 @@
+<div class="product">
+  <h1 class="product__header">Editing Product</h1>
+  <div class="product__wrapper">
+    <div class="product__field">
+      <label>ID</label>
+      <input class="product__input category__input--readonly" [ngModel]="idSignal()" readonly/>
+    </div>
+    <div class="product__field">
+      <label>Name</label>
+      <input class="product__input" [ngModel]="nameSignal()" (ngModelChange)="nameSignal.set($event)"/>
+    </div>
+    <div class="product__field">
+      <label>Description</label>
+      <input class="product__input" [ngModel]="descriptionSignal()" (ngModelChange)="descriptionSignal.set($event)"/>
+    </div>
+    <div class="product__field">
+      <label>Price</label>
+      <input class="product__input" [ngModel]="priceSignal()" (ngModelChange)="priceSignal.set($event)"/>
+    </div>
+    <button class="product__save" (click)="save()">Save</button>
+  </div>    
+</div>

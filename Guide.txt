@@ -1,0 +1,9 @@
+The PostgresSQL server must be installed.
+
+Verify that the password of the ConnectionStrings section of the appsettings.Development.json file of the server project matches the PostgresSQL server password.
+
+To create the required databases (portfolio-db), run the following commands from the Package Manager Console:
+
+	Update-Database -Context AppDbContext	
+
+The client project needs to install node modules (npm install).

@@ -1,0 +1,54 @@
+:host {  			
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  min-height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;  
+}
+
+header,
+footer {
+  background-color: #0d6efd;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 60px;
+
+  &__logo {
+    white-space: nowrap;
+    margin: 15px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 15px;
+    margin: 0 15px;
+  }
+
+  &__item {
+    white-space: nowrap;
+  }
+}
+
+.section {
+  padding: 64px 15px 0 15px;
+  flex-grow: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  color: #ffffff;
+}
