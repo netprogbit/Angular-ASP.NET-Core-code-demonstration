@@ -40,23 +40,18 @@ public class UnitOfWork : IUnitOfWork, IDisposable
 
     public void Dispose()
     {
-        Dispose(true);
-        GC.SuppressFinalize(this);
+        DisposeResources();
     }
 
     private bool _disposed = false;
 
-    protected virtual void Dispose(bool disposing)
+    protected virtual void DisposeResources()
     {
         if (_disposed)
             return;
 
-        if (disposing)
-        {
-            _dbContext.Dispose();
-            _transaction?.Dispose();
-        }
-
+        _dbContext?.Dispose();
+        _transaction?.Dispose();
         _disposed = true;
     }
 }
